@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.com">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trending</title>
+	<link rel="stylesheet" th:href="@{/styles.css}" />
+	<link rel="stylesheet" th:href="@{/owl/owl.theme.default.min.css}">
+	<link rel="stylesheet" th:href="@{/owl/owl.carousel.min.css}">
+</head>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/">
+			<img th:src="@{/logo/solevault-high-res.png}" alt="SoleVault Logo" width="auto" height="50px" />
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="vault">Vault</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="trending">Trending</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pin-entry">Register</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pin-entry-manage">Manage</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<body>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<br>
+	<div class="container-md">
+		<h1>Trending</h1>
+		<br>
+		<p>From classic silhouettes to innovative designs, sneakers continue to be a staple in fashion and culture. With
+			the rise of streetwear and sneaker culture, it's no surprise that the demad for exclusive and limited
+			edition sneakers is at an all time high. Brands like Nike, Adidas and Yeezy continue to release new
+			collections and collaborations that capture the attention of sneakerheads and fashion enthusiasts alike.
+			Whether you're a fan of retro styles or futuristic designs, there's a sneaker out there for everyone. Stay
+			up-to-date with the latest releases and trends by following our page for all things sneakers!'
+			<br>
+			<br>
+		<div class="table-responsive">
+			<table class="table table-dark table-striped table-hover table-bordered">
+				<thead>
+					<tr>
+						<th style="width: auto;" scope="col">Shoe ID</th>
+						<th scope="col">Brand Name</th>
+						<th scope="col">Model Name</th>
+						<th scope="col">RRP</th>
+						<th scope="col">Market Value</th>
+						<th scope="col">Units Sold</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="product: ${products}">
+						<td th:text="${product.shoeId}"></td>
+						<td th:text="${product.brandName}"></td>
+						<td th:text="${product.modelName}"></td>
+						<td th:text="${product.rrp}"></td>
+						<td th:text="${product.marketValue}"></td>
+						<td th:text="${product.unitsSold}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<br>
+	<hr class="breakline">
+
+	<!-- Most Popular Section -->
+	<div class="container mt-4">
+		<h2>Most Popular</h2>
+		<p>Explore the trendiest kicks in our Most Popular Shoes section - a curated collection of iconic designs,
+			limited-edition releases, and cutting-edge collaborations, showcasing the epitome of sneaker culture.</p>
+		<div class="owl-carousel">
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/chuttersnap-4JHMt29fvj8-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Grail Alert: The Ultimate Sneaker</h5>
+						<p class="card-text">Attention all sneakerheads! Feast your eyes on the most sought-after
+							sneaker of the season. This limited-edition masterpiece combines premium materials and
+							cutting-edge design, making it an instant grail in every collector's list.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/daniel-storek-JM-qKEd1GMI-unsplash.jpg}" class="card-img-top"
+						alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Streetwear Meets Luxury</h5>
+						<p class="card-text">In a groundbreaking collaboration, a renowned streetwear brand has joined
+							forces with a luxury fashion house to create the epitome of high-fashion streetwear. The
+							result? A show-stopping sneaker that blends urban style with opulent craftsmanship. Get
+							ready to flex like never before!</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/domino-164_6wVEHfI-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Iconic Retro Revival</h5>
+						<p class="card-text">Retro vibes with a modern twist! This legendary sneaker from the past has
+							made a triumphant return, capturing the hearts of both seasoned collectors and fresh sneaker
+							enthusiasts. Relive the golden era of sneaker culture with this timeless icon.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/hermes-rivera-w83s82yd3Fk-unsplash.jpg}" class="card-img-top"
+						alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Unleash Your Inner Athlete</h5>
+						<p class="card-text">Get ready to dominate the streets like a true athlete. These
+							performance-driven kicks combine style and function, engineered to push your limits and
+							elevate your game. Turn heads and raise your sneaker game with every stride.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/sj-BXbBAUoMbQ0-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Street-Ready Statement</h5>
+						<p class="card-text">Step up your streetwear game with a statement piece that demands attention.
+							Inspired by urban art and city life, these kicks are the perfect canvas for self-expression.
+							Elevate your style and make heads turn on every corner.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<hr class="breakline">
+
+	<!-- New Releases Section -->
+	<div class="container mt-4">
+		<h2>New Releases</h2>
+		<p>Get ahead of the game with our Upcoming Releases section, featuring exclusive previews of the hottest sneaker
+			drops from top brands.</p>
+		<div class="owl-carousel">
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/hermes-rivera-YehfyFdVK0A-unsplash.jpg}" class="card-img-top"
+						alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Unleash Your Inner Athlete</h5>
+						<p class="card-text">Get ready to dominate the streets like a true athlete. These
+							performance-driven kicks combine style and function, engineered to push your limits and
+							elevate your game. Turn heads and raise your sneaker game with every stride.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/alin-surdu-em89au_3qx8-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Street-Ready Statement</h5>
+						<p class="card-text">Step up your streetwear game with a statement piece that demands attention.
+							Inspired by urban art and city life, these kicks are the perfect canvas for self-expression.
+							Elevate your style and make heads turn on every corner.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/brian-hall-OShz0kboddc-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Nostalgic Vibes: Old School Cool</h5>
+						<p class="card-text">Throw it back with the hottest retro release of the year. Channel the
+							iconic '90s street style with these classic kicks, refreshed and reimagined for today's
+							sneakerheads. Embrace the old school cool and be the envy of every hypebeast.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/sj-BXbBAUoMbQ0-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Eco-Friendly and Stylish</h5>
+						<p class="card-text">Fashion meets sustainability in these eco-friendly sneakers made from
+							recycled materials. Take a stand for the environment without sacrificing style. Join the
+							movement towards a greener future while making a fashion-forward statement.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<hr class="breakline">
+
+	<!-- Upcoming Releases Section -->
+	<div class="container mt-4">
+		<h2>Upcoming Releases</h2>
+		<div class="owl-carousel">
+			<div class="container mt-4">
+				<div class="card custom-outline">
+					<img th:src="@{/cards/ezgif-4-3435a45c07.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">The Hype is Real</h5>
+						<p class="card-text">Get ready for the biggest sneaker event of the year! This exclusive and
+							limited drop is set to break the internet. Secure your spot in sneaker history by copping
+							these rare kicks before they vanish into sneaker lore.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card custom-outline">
+					<img th:src="@{/cards/ali-jouyandeh-EhVZnxQkoCQ-unsplash.jpg}" class="card-img-top"
+						alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Future Tech on Feet</h5>
+						<p class="card-text">Step into the future with these tech-infused sneakers. Packed with
+							innovative features and futuristic design, these kicks are not just shoes but an experience
+							of style and technology united.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card custom-outline">
+					<img th:src="@{/cards/SCHUh6_5000x.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Rare Gem Release</h5>
+						<p class="card-text">Calling all sneaker connoisseurs! This once-in-a-lifetime release is the
+							stuff of dreams. With its unique design and limited quantities, this rare gem is a must-add
+							to your coveted collection.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card custom-outline">
+					<img th:src="@{/cards/64a86d240c3e07ee19a98609_5.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Court Dominance: Hoops Heritage</h5>
+						<p class="card-text">Ball like a pro with these game-changing basketball kicks. Designed to
+							elevate your performance on the court while making a bold statement off the court. Channel
+							the hoops heritage and unleash your inner baller.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<hr class="breakline">
+
+	<!-- As Seen On Gallery -->
+	<div class="container-fluid bg-dark mt-5 py-4">
+		<div class="container">
+			<h2 class="text-center">As Seen On</h2>
+			<div class="row justify-content-center gallery">
+				<!-- Your images for the As Seen On Gallery -->
+				<img th:src="@{/AsSeen/aa85636afd9e0bbef305cd597903875a.jpg}" alt="As Seen On Image 1"
+					class="col-md-2 col-4 my-3">
+				<img th:src="@{/AsSeen/DtS2v9JWoAAN8DT.jpg}" alt="As Seen On Image 2" class="col-md-2 col-4 my-3">
+				<img th:src="@{/AsSeen/bb8c3056c85a15e3935b8709b28129bf.jpg}" alt="As Seen On Image 3"
+					class="col-md-2 col-4 my-3">
+			</div>
+		</div>
+	</div>
+
+
+	<br>
+
+	<label class="switch" for="darkModeToggle"> <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+		<span class="slider round"></span></label>
+	<p id="DarkModetext">Dark Mode is OFF</p>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+	</script>
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Include Owl Carousel JS -->
+<script th:src="@{/owl/owl.carousel.min.js}"></script>
+
+<script>
+	// Initialize Owl Carousel for each carousel
+	jQuery(document).ready(function ($) {
+		$(".owl-carousel").owlCarousel({
+			loop: true,
+			margin: 5,
+			nav: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				},
+				2000: {
+					items: 5
+				}
+			}
+		});
+	});
+
+	function toggleDarkMode() {
+		let element = document.body;
+		let content = document.getElementById("DarkModetext");
+
+		if (element.classList.contains("dark-mode")) {
+			element.classList.remove("dark-mode");
+			content.innerText = "Dark Mode is OFF";
+			localStorage.setItem("darkMode", "off"); // Save dark mode preference
+		} else {
+			element.classList.add("dark-mode");
+			content.innerText = "Dark Mode is ON";
+			localStorage.setItem("darkMode", "on"); // Save dark mode preference
+		}
+	}
+
+	// Check dark mode preference on page load
+	document.addEventListener("DOMContentLoaded", function () {
+		const darkModePreference = localStorage.getItem("darkMode");
+		if (darkModePreference === "on") {
+			document.body.classList.add("dark-mode");
+			document.getElementById("DarkModetext").innerText = "Dark Mode is ON";
+		}
+	});
+</script>
+<footer class="bg-body-tertiary text-center py-3">
+	<p>&copy; 2023 SoleVault. All rights reserved.</p>
+</footer>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.com">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<title>SoleVault</title>
+	<link rel="stylesheet" th:href="@{/styles.css}" />
+	<link rel="stylesheet" th:href="@{/owl/owl.theme.default.min.css}">
+	<link rel="stylesheet" th:href="@{/owl/owl.carousel.min.css}">
+	<script rel="s" th:href="@{/script.js}"></script>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">
+				<img th:src="@{/logo/solevault-high-res.png}" alt="SoleVault Logo" width="auto" height="50px" />
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="vault">Vault</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="trending">Trending</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pin-entry">Register</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pin-entry-manage">Manage</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="10000">
+				<img th:src="@{/images/nelson-ndongala-kKObh7tUPNc-unsplash.jpg}" class="d-block w-100" alt="Jordan 1s">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Air Jordan 1 High OG</h5>
+					<p>His Airness' finest</p>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="10000">
+				<img th:src="@{/images/jd_621223_a.jpeg}" class="d-block w-100" alt="Jordan 6 Rings">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Air Jordan 6 Rings</h5>
+					<p>Celebrate the legendary career of "His Airness" with the Jordan 6 Rings</p>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="10000">
+				<img th:src="@{/images/Samba_OG_Shoes_White_B75806_07_standard.jpeg}" class="d-block w-100"
+					alt="Adidas Sambas">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Third slide label</h5>
+					<p>Some representative placeholder content for the third slide.</p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+			data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+			data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+
+
+
+	<!-- Most Popular Section -->
+	<div class="container mt-4">
+		<h2>Popular Brands</h2>
+		<p>With innovation, heritage, and sustainability, these brands have captured the hearts of sneaker enthusiasts
+			worldwide.</p>
+		<div class="owl-carousel">
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/domino-164_6wVEHfI-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Nike</h5>
+						<p class="card-text">Just Do It.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/chuttersnap-4JHMt29fvj8-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Adidas</h5>
+						<p class="card-text">Impossible is Nothing.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/hermes-rivera-w83s82yd3Fk-unsplash.jpg}" class="card-img-top"
+						alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Air Jordan</h5>
+						<p class="card-text">His Airness' Brand</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/puma-sneakers-01.webp}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Puma</h5>
+						<p class="card-text">Forever Faster.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-4">
+				<div class="card">
+					<img th:src="@{/cards/sj-BXbBAUoMbQ0-unsplash.jpg}" class="card-img-top" alt="Card Image">
+					<div class="card-body">
+						<h5 class="card-title">Vejas</h5>
+						<p class="card-text">Wear your Values</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<div class="container-fluid">
+		<div class="container mt-5">
+			<div class="card custom-outline podcast">
+				<img th:src="@{/images/pod.jpg}" class="card-img-top" alt="SoleVault Podcast">
+				<div class="card-body">
+					<h5 class="card-title">SoleVault Podcast</h5>
+					<p class="card-text">ATune in to the SoleVault podcast for the latest interviews, sneaker trends,
+						and upcoming releases.</p>
+					<a href="." class="btn btn-primary">Listen Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<br>
+
+<!-- Rounded switch -->
+	<label class="switch" for="darkModeToggle"> <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+		<span class="slider round"></span></label>
+	<p id="DarkModetext">Dark Mode is OFF</p>
+
+
+</body>
+
+<!-- Bootstrap JS and jQuery scripts (required for some features) -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvf1jVtU4VbawjEx5B9JgTVm2m2TzRxvM7Gxh5l4a" crossorigin="anonymous"></script>
+<!-- Include Owl Carousel JS -->
+<script th:src="@{/owl/owl.carousel.min.js}"></script>
+<script>
+	// Initialize Owl Carousel for each carousel
+	jQuery(document).ready(function ($) {
+		$(".owl-carousel").owlCarousel({
+			loop: true,
+			margin: 5,
+			nav: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				},
+				2000: {
+					items: 5
+				}
+			}
+		});
+	});
+
+</script>
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<script>
+//	function toggleDarkMode() {let element = document.body; let content = document.getElementById("DarkModetext"); let darkModeToggle = document.getElementById("darkModeToggle"); if (darkModeToggle.checked) {element.classList.add("dark-mode"); content.innerText = "Dark Mode is ON";} else {element.classList.remove("dark-mode"); content.innerText = "Dark Mode is OFF";} }
+
+
+function toggleDarkMode() {
+  let element = document.body;
+  let content = document.getElementById("DarkModetext");
+
+  if (element.classList.contains("dark-mode")) {
+    element.classList.remove("dark-mode");
+    content.innerText = "Dark Mode is OFF";
+    localStorage.setItem("darkMode", "off"); // Save dark mode preference
+  } else {
+    element.classList.add("dark-mode");
+    content.innerText = "Dark Mode is ON";
+    localStorage.setItem("darkMode", "on"); // Save dark mode preference
+  }
+}
+
+// Check dark mode preference on page load
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModePreference = localStorage.getItem("darkMode");
+  if (darkModePreference === "on") {
+    document.body.classList.add("dark-mode");
+    document.getElementById("DarkModetext").innerText = "Dark Mode is ON";
+  }
+});
+
+</script>
+<footer class="bg-body-tertiary text-center py-3">
+	<p>&copy; 2023 SoleVault. All rights reserved.</p>
+</footer>
+
+</html>

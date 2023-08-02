@@ -1,0 +1,386 @@
+/* Global Styles */
+
+/* Fonts  */
+@font-face {
+	font-family: "Encode";
+	src: url(/src/main/resources/static/EncodeFont/EncodeSansSemiExpanded-Light.ttf) format('ttf');
+	src: url(/src/main/resources/static/EncodeFont/EncodeSansSemiExpanded-Regular.ttf) format('truetype')
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: "Encode", 'Times New Roman', Times, serif;
+	margin: 0;
+	/* padding-left: 5px; */
+	/* padding-top: 5px; */
+	/* color: #ffffff */
+	/* ; Set font color to white */
+}
+
+.podcast {
+	margin-bottom: 30px;
+}
+
+#myCarousel {
+	height: 300px;
+	/* Change the height as needed */
+}
+
+/* Force the images to cover the entire carousel frame */
+#myCarousel .carousel-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Editing the body text */
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin: 0;
+	background-color: #000000;
+	/* Set background color to black */
+	color: #ffffff;
+	/* Set font color to white */
+	transition: background-color 0.5s ease;
+}
+
+/* Adjusting the logo  */
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	max-height: 110px;
+	max-width: 100%;
+}
+
+/* Editing hyperlinks */
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* CSS for uniform card size */
+.container.mt-4 {
+	height: auto;
+	/* Set the desired height for the card container */
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	border: 1px solid #8a2be2;
+}
+
+.card-img-top {
+	max-width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	object-fit: cover;
+	height: 180px;
+	/* Set the desired height for the card image */
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.card-text {
+	font-size: 14px;
+	color: #444;
+	font-style: italic;
+	padding-top: 0px;
+	padding-bottom: 5px;
+}
+
+/* Adjusting header and header container */
+
+footer {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-style: italic;
+	color: rgb(128, 128, 255);
+	/* Set font color to white */
+
+	/* padding: 25px; */
+}
+
+
+.custom-outline {
+	border: 10px solid #8a2be2;
+	/* Purple outline color */
+	border-radius: 5px;
+	/* Rounded corners for the card */
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: auto;
+	/* Adjust the height as desired (e.g., 40px, 50px, etc.) */
+}
+
+.navbar-nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+.body-container {
+	font-family: serif;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 5px;
+}
+
+/* Style the container/contact section */
+.contact-container {
+	border-radius: 5px;
+	background-color: #1111006c;
+	padding: 40px;
+}
+
+/* Creates the border in events */
+.event {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+hr {
+	color: #ffffff;
+
+}
+
+.logo {
+	margin: 0;
+	font-size: 24px;
+	color: #fff;
+}
+
+/* Editting on the nav bar */
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+nav ul li a {
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	justify-content: center;
+}
+
+
+
+input[type="email"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 1px;
+	border: 1px solid #04AA6D;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 1px;
+	border: 1px solid #04AA6D;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+/* Styling on the button */
+input[type=submit] {
+	width: 100%;
+	background-color: #04AA6D;
+	border-radius: 20px;
+	color: #ffffff;
+	margin-top: 20px;
+	padding: 15px 15px;
+	border: none;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #ff3b3b;
+}
+
+/* DIRECTORY TABLE STYLESHEET*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+thead {
+	color: #a4a4a4;
+}
+
+.directory-table {
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	font-family: sans-serif;
+	min-width: 400px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	background-color: #aaa;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+	column-width: 50%;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #f2f2f2;
+}
+
+.dark-mode {
+
+	background-color: black;
+
+	color: white;
+
+}
+
+
+
+.light-mode {
+
+	background-color: white;
+
+	color: black;
+
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	border-radius: 34px;
+	/* Added rounded corners to the slider */
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	border-radius: 50%;
+	/* Make the slider handle round */
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: #2196F3;
+	/* Changed color when the toggle is on */
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* Additional styles for dark mode */
+.dark-mode .slider {
+	background-color: #444;
+}
+
+.dark-mode .slider:before {
+	background-color: #ddd;
+}
+
+.dark-mode input:checked+.slider {
+	background-color: #1E88E5;
+}
+
+.dark-mode input:checked+.slider:before {
+	-webkit-transform: translateX(30px);
+	-ms-transform: translateX(30px);
+	transform: translateX(30px);
+}
+
+th:first-child,
+td:first-child {
+	width: 50%;
+}
